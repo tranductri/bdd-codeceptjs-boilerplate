@@ -1,0 +1,37 @@
+{
+  "name": "codeceptjs-quick-start",
+  "version": "0.0.1",
+  "description": "codeceptjs quick start",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf tests/acceptance/report/*.*",
+    "test:acceptance": "yarn clean && ./node_modules/.bin/codeceptjs run --verbose --features",
+    "test:acceptance:parallel": "yarn clean && ./node_modules/.bin/codeceptjs run-multiple parallel --verbose --features",
+    "test:acceptance:launchReport": "./node_modules/.bin/allure serve tests/acceptance/report",
+    "gherkin:snippets": "./node_modules/.bin/codeceptjs gherkin:snippets",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gkushang/codeceptjs-quick-start"
+  },
+  "keywords": [
+    "codeceptjs",
+    "quick start"
+  ],
+  "license": "MIT",
+  "author": "Kushang Gajjar <gkushang@gmail.com>",
+  "devDependencies": {
+    "@wdio/selenium-standalone-service": "^5.8.4",
+    "allure-commandline": "^2.9.0",
+    "codeceptjs": "^2.1.2",
+    "codeceptjs-selenium": "^1.0.2",
+    "debug": "^4.1.1",
+    "faker": "^4.1.0",
+    "protractor": "^5.4.2",
+    "rimraf": "^2.6.3",
+    "selenium-standalone": "^6.16.0",
+    "should": "^13.2.3",
+    "webdriverio": "^5.8.1"
+  }
+}
