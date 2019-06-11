@@ -1,6 +1,6 @@
 const { I } = inject();
 const should = require('should');
 
-Before(async () => {
-  I.amOnPage('/#/');
-});
+// Before(async () => {
+//   I.amOnPage('/#/');
+// });

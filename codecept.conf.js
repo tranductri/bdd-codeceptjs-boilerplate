@@ -1,9 +1,10 @@
 let debug = require('debug')('acceptance:config');
 
-const DEFAULT_HOST = 'https://github.com/';
+const DEFAULT_HOST = 'http://localhost:8000';
 const RELATIVE_PATH = './tests/acceptance/';
 const PAGES_PATH = RELATIVE_PATH + 'pages/';
 const STEPS_PATH = RELATIVE_PATH + 'step_definitions/';
+const FEATURES_PATH = RELATIVE_PATH + 'features/';
 
 const HOST = process.env.CODECEPT_HOST
   ? process.env.CODECEPT_HOST
@@ -44,8 +45,10 @@ const conf = {
   gherkin: {
     features: RELATIVE_PATH + 'features/**/*.feature',
     steps: [
-      STEPS_PATH + '_example_search/github.steps.js',
-      STEPS_PATH + 'hooks.js'
+      STEPS_PATH + 'snippet.steps.js',
+      STEPS_PATH + 'hooks.js',
+      FEATURES_PATH + '_example_search/github.steps.js',
+      FEATURES_PATH + 'Car/Benefit/search_benefit.steps.js',
     ]
   },
   plugins: {
